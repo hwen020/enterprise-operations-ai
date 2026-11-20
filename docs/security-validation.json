@@ -1,0 +1,17 @@
+{
+  "successful": true,
+  "public_files": 57,
+  "findings": [],
+  "restricted_phrase_count": 6,
+  "history_checked": false,
+  "reachable_commits": 0,
+  "history_blob_checks": 0,
+  "license_inventory": {
+    "third_party_application_dependencies": [],
+    "unreviewed_imports": [],
+    "repository_license": "MIT",
+    "runtime": "Python license stack / SQLite public domain; external runtimes not vendored"
+  },
+  "images": "PNG text metadata scanned; original screenshots require visual review",
+  "scope": "Content patterns and reachable Git history, not a guarantee of exhaustive secret or ownership detection"
+}

@@ -1,0 +1,10 @@
+{
+  "tests": 21,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "python": "3.8.1",
+  "scope": "Temporary SQLite and localhost HTTP only; no secret or external connector",
+  "checked_at_utc": "2026-11-20T23:18:48.688811Z"
+}

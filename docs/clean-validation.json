@@ -1,0 +1,12 @@
+{
+  "installation": true,
+  "initialization": true,
+  "automated_tests": true,
+  "no_key_start": true,
+  "retained_database_restart": true,
+  "ephemeral_database_reseed": true,
+  "visitor_isolation": true,
+  "successful": true,
+  "checked_at_utc": "2026-11-20T23:21:19.489891Z",
+  "scope": "Offline clean copy + fresh virtual environment + localhost only. Hosting provider not deployed."
+}
