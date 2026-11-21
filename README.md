@@ -1,6 +1,8 @@
 # Enterprise Operations AI
 ### Agentic Workflow Automation Platform
 
+**[Live Demo](https://enterprise-operations-ai.onrender.com) | [GitHub](https://github.com/hwen020/enterprise-operations-ai)**
+
 A working full-stack portfolio sandbox that connects fictional CRM records, versioned quotations, approval-gated campaigns, transparent rule agents, and synthetic analytics.
 
 **Simulation is explicit.** Persistence, REST APIs, validation, visitor isolation, versioning, and approval gates are implemented. Agent composition uses local rules and templates, not an LLM. Execution creates deterministic local results, never real messages.
@@ -99,9 +101,11 @@ Evidence is recorded in [VALIDATION](docs/VALIDATION.md), [automated results](do
 
 ## Live Demo and deployment
 
-**Live Demo: not deployed or verified. No public URL is claimed.**
+**Live Demo: [Open the live sandbox](https://enterprise-operations-ai.onrender.com)**
 
-[render.yaml](render.yaml) prepares a single free native Python service. [SETUP](SETUP.md) explains deployment, environment variables, health checks, and optional Docker use. [RELEASE](RELEASE.md) provides the GitHub creation and publication checklist. Public release and deployment require the repository owner's final review.
+Public acceptance passed: 30 desktop checks, 32 mobile checks at 390px, 33 HTTPS API checks, zero browser runtime/HTTP 5xx errors, and an actual Free-service restart/reseed check. See [public validation evidence](docs/live-validation.json).
+
+[render.yaml](render.yaml) describes the deployed single Free native Python service. [SETUP](SETUP.md) explains environment variables, health checks and optional Docker use. [RELEASE](RELEASE.md) documents the published repository and deployment checks. Subsequent changes should repeat the publication review.
 
 Render free services lose local SQLite files on restarts, redeploys, or spin-down. This project deliberately treats that storage as disposable: a returning cookie receives a newly seeded workspace after data loss. While the process/filesystem remains available, data survives refreshes and server restarts that retain the file. Visitors cannot read or reset another workspace. Do not use this deployment for real records or durable business storage. See [Render's free-service documentation](https://render.com/docs/free).
 
@@ -109,6 +113,6 @@ Render free services lose local SQLite files on restarts, redeploys, or spin-dow
 
 Implemented: six connected modules, local rules, durable SQLite records on a retained filesystem, snapshots and approval constraints, per-visitor isolation, reset, tests, and responsive UI.
 
-Not implemented: actual model inference, real email, external CRM/carrier connectors, real orders, billing, organization accounts, production SSO/RBAC, distributed jobs, or a cloud deployment. Future work may include proper authenticated teams, a durable hosted database, and approved external adapters. They are not prerequisites for exploring this sandbox.
+Not implemented: actual model inference, real email, external CRM/carrier connectors, real orders, billing, organization accounts, production SSO/RBAC, distributed jobs. Future work may include proper authenticated teams, a durable hosted database, and approved external adapters. They are not prerequisites for exploring this sandbox.
 
-Newly authored project code and assets are offered under [MIT](LICENSE), subject to the owner's final release approval. Runtime/tool licenses and provenance are documented in [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md). This is an AI-assisted implementation with executable tests and explicit capability limits.
+Newly authored project code and assets are licensed under [MIT](LICENSE), with copyright attributed to hwen020. Runtime/tool licenses and provenance are documented in [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md). This is an AI-assisted implementation with executable tests and explicit capability limits.

@@ -12,7 +12,7 @@
 | Lost-filesystem simulation | Old cookie rejected; fresh seed created | clean-validation.json |
 | Cross-visitor object access and reset | Blocked / isolated | tests and clean-validation.json |
 | Source, secrets, restricted phrases, dependency inventory | Zero findings | security-validation.json |
-| Git history | Required post-initial-commit scan; delivered separately | tools/public_scan.py --history |
+| Git history | All reachable commit blobs and metadata scanned; no findings | tools/public_scan.py --history |
 
 The browser acceptance covers seeded Dashboard, CRM create/search/empty/stage/timeline, CSV preview and atomic import, quotation creation, Decimal totals, new revision and comparison, Reviewer switching, quotation approval, campaign linkage, unapproved execution rejection, current campaign approval, simulated results, exclusion evidence, complete workflow steps, persisted invalid-import error, Analytics, browser reload, own-workspace reset, and mobile navigation/overflow.
 
@@ -20,9 +20,12 @@ All business test records are fictional and all API/browser tests use disposable
 
 The clean copy is assembled from the public file inventory into a new temporary directory and virtual environment, installed using pip --no-index, initialized, tested and started without inherited credentials. Persistence tests stop/restart the child service with the same file, then model ephemeral file loss using a separate fresh database path. This is not an actual hosting-provider deployment.
 
+## Public deployment acceptance
+The application is published at https://enterprise-operations-ai.onrender.com from https://github.com/hwen020/enterprise-operations-ai. Public testing passed 30 desktop and 32 mobile browser checks, 33 API/security/isolation checks and an actual restart/reseed check. Runtime exceptions and unexpected HTTP 5xx responses were zero during browser checks. See live-validation.json.
+
+The initial browser attempt stopped at a role-switch timing race in the test driver. The resumed driver retained all business assertions and additionally waited for the Reviewer approval button to become enabled. It did not change application permissions or suppress errors.
+
 ## Not executed / not claimed
-- No public GitHub push, public repository creation or cloud instance.
-- No verified Live Demo URL.
 - No Docker build without an available engine.
 - No real LLM, email, CRM, carrier, payment or business API integration.
 - No claim of production identity, durable free-tier storage or exhaustive legal/secret certification.
@@ -30,4 +33,4 @@ The clean copy is assembled from the public file inventory into a new temporary 
 ## Reproduction
 Run tools/verify.py, tools/browser_check.py, tools/public_scan.py and tools/clean_check.py. After committing, run tools/public_scan.py --history. Raw diagnostics stay in ignored .local/; public JSON summaries omit machine paths, credentials and cookie values.
 
-A final owner review must accept the MIT license, confirm release rights and inspect the entire repository and images before any public push or deployment.
+The owner authorized publication and deployment. Future releases must repeat the license, provenance, content and history checks. Mock personas and outcomes remain explicit; production identity and durable business storage are not claimed.

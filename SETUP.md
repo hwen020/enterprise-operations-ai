@@ -44,7 +44,9 @@ After final repository-owner approval:
 9. Test fresh and incognito browsers, reset isolation, current approval gates, and a restart.
 10. Only after actual cloud validation add the real Live Demo URL to README.
 
-No remote or deployment account is preconfigured; no public instance is claimed.
+Verified public instance: https://enterprise-operations-ai.onrender.com
+
+Repository: https://github.com/hwen020/enterprise-operations-ai. Public desktop, mobile, API and restart evidence is in docs/live-validation.json. The steps above describe reproduction; do not recreate the existing service.
 
 ### Free-tier data behavior
 Render free services have ephemeral filesystems and may spin down on idle. Local SQLite changes are lost on redeploy, restart or spin-down. This is intentional here: reload creates a new fictional workspace when the prior database is gone. Browser refresh retains data while the file exists; ordinary local restart with the same file retains unexpired sessions.

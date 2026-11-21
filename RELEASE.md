@@ -1,6 +1,12 @@
 # Release preparation
 
-Status: prepared locally; publication and cloud deployment require final owner approval.
+Status: published after owner authorization.
+
+Repository: https://github.com/hwen020/enterprise-operations-ai
+
+Live Demo: https://enterprise-operations-ai.onrender.com
+
+Public acceptance evidence: docs/live-validation.json. The existing service is Free. Do not recreate either resource when maintaining this release.
 
 ## Before public release
 1. Review README, screenshots, provenance inventory and MIT license. Confirm release rights.
@@ -22,10 +28,10 @@ git branch -M main
 git push -u origin main
 ```
 
-These are instructions, not executed actions. No remote is configured in this delivery. Make Public only after the owner approves the entire repository, history, license and screenshots.
+The commands above are reference instructions for a new checkout. This repository already has the reviewed personal GitHub origin and is Public. Do not add a second remote or repeat repository creation.
 
 ## Render (after separate deployment approval)
-Follow SETUP.md using render.yaml. Verify HTTPS cookies, two-browser isolation, approval blocks, reset, health, error traces and restart reseeding. Record the deployed revision and actual URL. Then update the README Live Demo field. No verified URL is available yet.
+Follow SETUP.md using render.yaml. Verify HTTPS cookies, two-browser isolation, approval blocks, reset, health, error traces and restart reseeding. Record the deployed revision and actual URL. Then update the README Live Demo field. The verified URL is listed above; cloud tests and the actual restart check passed.
 
 ## Suggested initial release notes
 Enterprise Operations AI / Portfolio MVP:
